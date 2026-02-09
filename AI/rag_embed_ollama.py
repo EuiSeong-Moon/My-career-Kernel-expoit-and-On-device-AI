@@ -196,7 +196,8 @@ def ask_ollama(model_name: str, question: str, contexts: List[str]) -> str:
     prompt = (
         "You are a precise security engineer. "
         "Answer the question using ONLY the provided context. "
-        "If the answer isn't in the context, say you don't know.\n\n"
+        "If the answer isn't in the context, say you don't know. "
+        "Limit your answer to no more than three sentences.\n\n"
         f"Context:\n{context_block}\n\n"
         f"Question:\n{question}\n\n"
         "Answer:"
